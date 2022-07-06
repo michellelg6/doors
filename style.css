@@ -1,0 +1,54 @@
+#container{
+	/*inner spacing of container */
+	padding: 3.125rem;
+}
+
+#card{
+	/*Width and height of the actual card */
+	height: 18.75rem;
+	width: 12.5rem;
+	
+	/*Will Make faces absolute */
+	position: relative;
+	
+	/*Tells the system we are working with 3d*/
+	transform-style: preserve-3d;
+	
+	transition: transform 1s ease-in-out;
+}
+
+#card:hover{
+	/*turn it in the Y direction*/
+	transform: rotateY(180deg);
+}
+
+.card-face{
+	/*Make items centered */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	/*Not to see the back */
+	backface-visibility: hidden;
+	
+	/*border and font */
+	border: solid 5px black;
+	font-size: 40px;
+	
+	/*Makes the faces stacked on top*/
+	position: absolute;
+	
+	/*Format them*/
+	height: 100%;
+	width: 100%;
+	
+}
+
+#front{
+	background-color: blue;
+}
+
+#back{
+	background-color:#ffa500;
+	transform: rotateY(180deg);
+}
